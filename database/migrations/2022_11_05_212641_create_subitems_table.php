@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('subitems', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('art');
+            $table->integer('rank');
         });
     }
 

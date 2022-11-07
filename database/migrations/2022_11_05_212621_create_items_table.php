@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('image')->nullable();
+            $table->string('image_folder')->nullable();
+            $table->string('image_2')->nullable();
+            $table->string('image_2_folder')->nullable();
+            $table->integer('subitem_id');
         });
     }
 
